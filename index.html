@@ -1,0 +1,2589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lifelink | Smart Blood Donation & Eligibility System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/components/auth.css">
+    <link rel="stylesheet" href="CSS/components/navbar.css">
+    <link rel="stylesheet" href="CSS/components/dashboard.css">
+    <link rel="stylesheet" href="CSS/components/donors.css">
+    <link rel="stylesheet" href="CSS/components/forms.css">
+    <link rel="stylesheet" href="CSS/components/requests.css">
+    <link rel="stylesheet" href="CSS/components/matcher.css">
+    <link rel="stylesheet" href="CSS/components/contact.css">
+    <link rel="stylesheet" href="CSS/components/modals.css">
+    <link rel="stylesheet" href="CSS/components/chatbot.css">
+</head>
+
+<body>
+
+    <!-- =================================================
+         LOCAL STORAGE LOGIN / AUTH GATE
+         ================================================= -->
+
+
+
+    <!-- =================================================
+         NAVIGATION BAR
+         ================================================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 4L12 20" />
+                    <path d="M18 6L6 18" />
+                    <path d="M18 18L6 6" />
+                    <circle cx="12" cy="12" r="10" />
+                </svg>
+            </div>
+
+            <div>
+
+                <h2>
+                    LifeLink
+                </h2>
+
+                <span>
+                    Smart Blood Matching & Eligibility Engine
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <button class="nav-btn active" data-page="dashboard">
+
+                <span class="nav-icon">🏠</span>
+                Dashboard
+
+            </button>
+
+            <button class="nav-btn" data-page="donors">
+
+                <span class="nav-icon">👥</span>
+                Donors
+
+            </button>
+
+            <button class="nav-btn" data-page="register">
+
+                <span class="nav-icon">📝</span>
+                Register Wizard
+
+            </button>
+
+            <button class="nav-btn" data-page="requests">
+
+                <span class="nav-icon">📋</span>
+                Requests
+
+            </button>
+
+            <button class="nav-btn" data-page="find">
+
+                <span class="nav-icon">🔎</span>
+                Smart Matcher
+
+            </button>
+
+            <button class="nav-btn" data-page="contact">
+
+                <span class="nav-icon">📩</span>
+                Contact
+
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =================================================
+         MAIN CONTENT
+         ================================================= -->
+
+    <main>
+
+
+        <!-- =================================================
+             DASHBOARD PAGE
+             ================================================= -->
+
+        <section id="dashboard" class="page active-page">
+
+            <div class="dashboard-hero">
+
+                <div class="hero-content">
+
+                    <span class="hero-label">
+                        <span class="pulse-dot"></span>
+                        SMART BLOOD MATCHING PLATFORM
+                    </span>
+
+                    <h1>
+                        Every donor can
+                        <span>save a life today.</span>
+                    </h1>
+
+                    <p>
+                        Algorithmically pairing eligible,
+                        compatible blood donors with urgent
+                        hospital & patient requests in real time.
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <button class="hero-button" onclick="showPage('register')">
+
+                            ♥ Become a Donor
+
+                        </button>
+
+                        <button class="hero-button secondary-hero-btn" onclick="showPage('find')">
+
+                            🔎 Find Matching Donor
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-blood">
+
+                    <div class="blood-drop">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C12 2 6 8 6 14C6 17.3137 8.68629 20 12 20C15.3137 20 18 17.3137 18 14C18 8 12 2 12 2Z" />
+                            <circle cx="12" cy="14" r="2" fill="white" opacity="0.3" />
+                        </svg>
+                    </div>
+
+                    <!-- Floating particles -->
+                    <div class="particle particle-1"></div>
+                    <div class="particle particle-2"></div>
+                    <div class="particle particle-3"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BASIC STATS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card" style="animation-delay: 0.1s;">
+                    <div class="stat-icon blue">
+                        👥
+                    </div>
+                    <div>
+                        <span>Total Donors</span>
+                        <strong id="totalDonors">0</strong>
+                    </div>
+                    <div class="stat-trend up">↑ 12%</div>
+                </div>
+
+                <div class="stat-card" style="animation-delay: 0.2s;">
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+                    <div>
+                        <span>Eligible Donors</span>
+                        <strong id="eligibleDonors">0</strong>
+                    </div>
+                    <div class="stat-trend up">↑ 8%</div>
+                </div>
+
+                <div class="stat-card" style="animation-delay: 0.3s;">
+                    <div class="stat-icon red">
+                        🩸
+                    </div>
+                    <div>
+                        <span>Total Requests</span>
+                        <strong id="totalRequests">0</strong>
+                    </div>
+                    <div class="stat-trend up">↑ 5%</div>
+                </div>
+
+                <div class="stat-card" style="animation-delay: 0.4s;">
+                    <div class="stat-icon emergency">
+                        🚨
+                    </div>
+                    <div>
+                        <span>Emergency</span>
+                        <strong id="emergencyRequests">0</strong>
+                    </div>
+                    <div class="stat-trend down">↑ 3%</div>
+                </div>
+
+            </div>
+
+
+            <!-- ADVANCED METRICS -->
+
+            <div class="advanced-stats-grid">
+
+                <div class="advanced-stat-card" style="animation-delay: 0.15s;">
+                    <div class="advanced-stat-icon">⏳</div>
+                    <div>
+                        <span>Searching Requests</span>
+                        <strong id="searchingRequests">0</strong>
+                        <small>Waiting for match</small>
+                    </div>
+                </div>
+
+                <div class="advanced-stat-card" style="animation-delay: 0.25s;">
+                    <div class="advanced-stat-icon">📊</div>
+                    <div>
+                        <span>Response Rate</span>
+                        <strong>94%</strong>
+                        <small>Last 30 days</small>
+                    </div>
+                    <div class="mini-progress">
+                        <div class="mini-progress-fill" style="width: 94%;"></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- DASHBOARD REQUESTS -->
+
+            <div class="dashboard-grid">
+
+                <div class="dashboard-card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <h2>
+                                Active Requests
+                                <span class="notification-badge" id="activeRequestCount">0</span>
+                            </h2>
+
+                            <p>
+                                Highest priority blood requests
+                            </p>
+
+                        </div>
+
+                        <button class="small-btn" onclick="showPage('requests')">
+
+                            View All →
+
+                        </button>
+
+                    </div>
+
+                    <div id="dashboardRequests">
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <h2>
+                                Blood Group Overview
+                            </h2>
+
+                            <p>
+                                Registered donor distribution
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div id="bloodGroupOverview">
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- After the existing stats-grid -->
+            <div class="stats-grid">
+                <!-- ... existing stats cards ... -->
+            </div>
+
+            <!-- PASTE THIS NEW STATS SECTION HERE -->
+            <div class="advanced-stats-grid" style="margin-top: 16px;">
+                <div class="advanced-stat-card" style="animation-delay: 0.15s;">
+                    <div class="advanced-stat-icon">📊</div>
+                    <div>
+                        <span>Total Donations</span>
+                        <strong id="totalDonations">0</strong>
+                        <small>Lifetime donations</small>
+                    </div>
+                </div>
+
+                <div class="advanced-stat-card" style="animation-delay: 0.25s;">
+                    <div class="advanced-stat-icon">🏥</div>
+                    <div>
+                        <span>Blood Group Coverage</span>
+                        <strong id="bloodGroupCoverage">0</strong>
+                        <small>Groups available</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PASTE THIS NEW BLOOD GROUP DETAILS SECTION -->
+            <div class="dashboard-grid" style="margin-top: 16px;">
+                <div class="dashboard-card">
+                    <div class="card-heading">
+                        <div>
+                            <h2>Blood Group Distribution</h2>
+                            <p>Donor count by blood type</p>
+                        </div>
+                    </div>
+                    <div id="bloodGroupDistribution"></div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="card-heading">
+                        <div>
+                            <h2>Zone Statistics</h2>
+                            <p>Donor distribution by zone</p>
+                        </div>
+                    </div>
+                    <div id="zoneStatistics"></div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+        <!-- =================================================
+             DONORS PAGE
+             ================================================= -->
+
+        <section id="donors" class="page">
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="page-label">
+                        DONOR NETWORK
+                    </span>
+
+                    <h1>
+                        Registered Donors
+                    </h1>
+
+                    <p>
+                        Search and filter donors using blood
+                        group, zone and eligibility status.
+                    </p>
+
+                </div>
+
+                <button class="primary-btn" onclick="showPage('register')">
+
+                    + Register Donor
+
+                </button>
+
+            </div>
+
+
+            <div class="filter-box">
+
+                <div class="search-wrapper">
+
+                    <span>
+                        🔎
+                    </span>
+
+                    <input type="text" id="donorSearch" placeholder="Search donor by name...">
+
+                </div>
+
+
+                <select id="bloodFilter">
+
+                    <option value="">
+                        All Blood Groups
+                    </option>
+
+                    <option value="A+">
+                        A+
+                    </option>
+
+                    <option value="A-">
+                        A-
+                    </option>
+
+                    <option value="B+">
+                        B+
+                    </option>
+
+                    <option value="B-">
+                        B-
+                    </option>
+
+                    <option value="AB+">
+                        AB+
+                    </option>
+
+                    <option value="AB-">
+                        AB-
+                    </option>
+
+                    <option value="O+">
+                        O+
+                    </option>
+
+                    <option value="O-">
+                        O-
+                    </option>
+
+                </select>
+
+
+                <select id="zoneFilter">
+
+                    <option value="">
+                        All Zones
+                    </option>
+
+                    <option value="Zone A">
+                        Zone A
+                    </option>
+
+                    <option value="Zone B">
+                        Zone B
+                    </option>
+
+                    <option value="Zone C">
+                        Zone C
+                    </option>
+
+                    <option value="Zone D">
+                        Zone D
+                    </option>
+
+                </select>
+
+
+                <select id="eligibilityFilter">
+
+                    <option value="">
+                        All Status
+                    </option>
+
+                    <option value="eligible">
+                        Eligible
+                    </option>
+
+                    <option value="cooldown">
+                        Cooldown
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="result-count">
+
+                <span id="donorResultCount">
+                    0 donors
+                </span>
+
+            </div>
+
+
+            <div id="donorsGrid" class="donors-grid">
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             REQUESTS PAGE
+             ================================================= -->
+
+        <section id="requests" class="page">
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="page-label">
+                        BLOOD BROADCASTS
+                    </span>
+
+                    <h1>
+                        Active Emergency Requests
+                    </h1>
+
+                    <p>
+                        Broadcasted hospital and patient
+                        blood requests sorted by urgency level.
+                    </p>
+
+                </div>
+
+                <button class="primary-btn" onclick="openRequestModal()">
+
+                    + Create New Request
+
+                </button>
+
+            </div>
+
+
+            <div class="request-filters">
+
+                <button class="request-filter active" data-filter="all">
+
+                    All Priority Levels
+
+                </button>
+
+                <button class="request-filter emergency-filter" data-filter="Emergency">
+
+                    🚨 Emergency
+
+                </button>
+
+                <button class="request-filter urgent-filter" data-filter="Urgent">
+
+                    🔴 Urgent
+
+                </button>
+
+                <button class="request-filter normal-filter" data-filter="Normal">
+
+                    🟢 Normal
+
+                </button>
+
+            </div>
+
+
+            <div id="requestsList" class="request-list">
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SMART MATCHER PAGE
+             ================================================= -->
+
+        <section id="find" class="page">
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="page-label">
+                        ALGORITHMIC MATCHING
+                    </span>
+
+                    <h1>
+                        Smart Donor Search & Ranking
+                    </h1>
+
+                    <p>
+                        Filtering by biological compatibility,
+                        90-day cooldown status, location proximity,
+                        and priority boost.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="match-form-card">
+
+                <div class="match-form-header">
+
+                    <div class="match-icon">
+                        🔎
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Run Smart Compatibility Search
+                        </h2>
+
+                        <p>
+                            Enter patient criteria to calculate
+                            real-time donor compatibility scores.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="requestForm">
+
+                    <div class="form-group">
+
+                        <label for="patientName">
+                            Patient Name *
+                        </label>
+
+                        <input type="text" id="patientName" placeholder="e.g. Vikram Malhotra" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="requiredBloodType">
+                            Required Blood Group *
+                        </label>
+
+                        <select id="requiredBloodType" required>
+
+                            <option value="">
+                                Select Blood Group
+                            </option>
+
+                            <option value="A+">
+                                A+
+                            </option>
+
+                            <option value="A-">
+                                A-
+                            </option>
+
+                            <option value="B+">
+                                B+
+                            </option>
+
+                            <option value="B-">
+                                B-
+                            </option>
+
+                            <option value="AB+">
+                                AB+
+                            </option>
+
+                            <option value="AB-">
+                                AB-
+                            </option>
+
+                            <option value="O+">
+                                O+
+                            </option>
+
+                            <option value="O-">
+                                O-
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="requestZone">
+                            Patient Location Zone *
+                        </label>
+
+                        <select id="requestZone" required>
+
+                            <option value="">
+                                Select Zone
+                            </option>
+
+                            <option value="Zone A">
+                                Zone A
+                            </option>
+
+                            <option value="Zone B">
+                                Zone B
+                            </option>
+
+                            <option value="Zone C">
+                                Zone C
+                            </option>
+
+                            <option value="Zone D">
+                                Zone D
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="urgency">
+                            Request Priority *
+                        </label>
+
+                        <select id="urgency" required>
+
+                            <option value="">
+                                Select Priority
+                            </option>
+
+                            <option value="Emergency">
+                                🚨 Emergency
+                            </option>
+
+                            <option value="Urgent">
+                                🔴 Urgent
+                            </option>
+
+                            <option value="Normal">
+                                🟢 Normal
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="requestedUnits">
+                            Required Units (Pints) *
+                        </label>
+
+                        <input type="number" id="requestedUnits" min="1" max="10" placeholder="e.g. 2" required>
+
+                    </div>
+
+
+                    <button type="submit" class="submit-btn full-width">
+
+                        ⚡ Execute Smart Matching Algorithm
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <div class="algorithm-box">
+
+                <h3>
+                    Four-Tier Algorithmic Matching Logic
+                </h3>
+
+                <div class="algorithm-steps">
+
+                    <div>
+                        <strong>01</strong>
+                        <span>
+                            Blood Compatibility
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>02</strong>
+                        <span>
+                            Eligibility / Cooldown
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>03</strong>
+                        <span>
+                            Location Proximity
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong>04</strong>
+                        <span>
+                            Urgency Priority
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="matchResults" class="match-results">
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CONTACT & MESSAGES PAGE (COMBINED)
+             ================================================= -->
+
+        <section id="contact" class="page">
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="page-label">
+                        SUPPORT & COMMUNICATION
+                    </span>
+
+                    <h1>
+                        Contact & Messages
+                    </h1>
+
+                    <p>
+                        Send a support message. All messages appear instantly below.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-layout">
+
+                <div class="contact-info-card">
+
+                    <span class="contact-icon">
+                        ♥
+                    </span>
+
+                    <h2>
+                        We are here to help
+                    </h2>
+
+                    <p>
+                        Use this page for project support,
+                        donor-network issues, or feedback
+                        about the matching flow.
+                    </p>
+
+
+                    <div class="contact-info-item">
+
+                        <strong>
+                            📧 Email
+                        </strong>
+
+                        <span>
+                            support@lifelink.local
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-info-item">
+
+                        <strong>
+                            📞 Support
+                        </strong>
+
+                        <span>
+                            Phase-1 local prototype
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-info-item">
+
+                        <strong>
+                            🕐 Response
+                        </strong>
+
+                        <span>
+                            Stored locally for demonstration
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-form-card">
+
+                    <div class="match-form-header">
+
+                        <div class="match-icon">
+                            📩
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Send a Message
+                            </h2>
+
+                            <p>
+                                All fields are required.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <form id="contactForm" class="contact-form">
+
+                        <div class="contact-form-grid">
+
+                            <div class="form-group">
+
+                                <label for="contactName">
+                                    Name *
+                                </label>
+
+                                <input type="text" id="contactName" required>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="contactEmail">
+                                    Email *
+                                </label>
+
+                                <input type="email" id="contactEmail" required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="contactSubject">
+                                Subject *
+                            </label>
+
+                            <input type="text" id="contactSubject" required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="contactMessage">
+                                Message *
+                            </label>
+
+                            <textarea id="contactMessage" rows="6" required>
+                            </textarea>
+
+                        </div>
+
+
+                        <div id="contactFormMessage" class="form-success-message" aria-live="polite">
+                        </div>
+
+
+                        <button type="submit" class="primary-btn">
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 MESSAGES LIST (SCROLLABLE - ON THE SAME PAGE)
+                 ================================================= -->
+
+            <div class="messages-section">
+
+                <div class="messages-toolbar">
+
+                    <div class="result-count">
+
+                        <span id="messageResultCount">
+                            0 messages
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div id="messagesList" class="messages-list">
+
+                    <div class="empty-state">
+                        No contact messages found.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- =================================================
+             REGISTER DONOR PAGE
+             ================================================= -->
+
+        <section id="register" class="page">
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="page-label">
+                        DONOR REGISTRATION
+                    </span>
+
+                    <h1>
+                        Become a lifelink Donor
+                    </h1>
+
+                    <p>
+                        Complete all ten questions to create
+                        your donor profile.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="wizard-card">
+
+                <div class="wizard-header">
+
+                    <div>
+
+                        <span id="wizardStepLabel">
+                            Question 1 of 10
+                        </span>
+
+                        <h2>
+                            Donor Registration
+                        </h2>
+
+                    </div>
+
+                    <span id="wizardStepPercent">
+                        10% Completed
+                    </span>
+
+                </div>
+
+
+                <div class="wizard-progress">
+
+                    <div id="wizardProgressBar">
+                    </div>
+
+                </div>
+
+
+                <form id="donorForm">
+
+
+                    <!-- QUESTION 1 -->
+
+                    <div class="wizard-step active" data-step="1">
+
+                        <span class="question-number">
+                            QUESTION 01
+                        </span>
+
+                        <h2>
+                            Is this your first time donating blood?
+                        </h2>
+
+                        <p>
+                            Please select one option.
+                        </p>
+
+
+                        <div class="wizard-choice-grid">
+
+                            <label class="wizard-choice">
+
+                                <input type="radio" name="firstTime" value="yes">
+
+                                <span class="choice-icon">
+                                    ✓
+                                </span>
+
+                                <span>
+                                    Yes
+                                </span>
+
+                            </label>
+
+
+                            <label class="wizard-choice">
+
+                                <input type="radio" name="firstTime" value="no">
+
+                                <span class="choice-icon">
+                                    ✕
+                                </span>
+
+                                <span>
+                                    No
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUESTION 2 -->
+
+                    <div class="wizard-step" data-step="2">
+
+                        <span class="question-number">
+                            QUESTION 02
+                        </span>
+
+                        <h2>
+                            Are you currently feeling healthy?
+                        </h2>
+
+                        <p>
+                            Please answer honestly.
+                        </p>
+
+
+                        <div class="wizard-choice-grid">
+
+                            <label class="wizard-choice">
+
+                                <input type="radio" name="healthy" value="yes">
+
+                                <span class="choice-icon">
+                                    ✓
+                                </span>
+
+                                <span>
+                                    Yes
+                                </span>
+
+                            </label>
+
+
+                            <label class="wizard-choice">
+
+                                <input type="radio" name="healthy" value="no">
+
+                                <span class="choice-icon">
+                                    ✕
+                                </span>
+
+                                <span>
+                                    No
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <!-- =================================================
+         REGISTRATION STOPPED SCREEN
+         ================================================= -->
+
+                    <div id="registrationStoppedScreen" class="registration-stopped-screen is-hidden">
+
+                        <div class="registration-stopped-card">
+
+                            <div class="stopped-icon">
+                                ⏸
+                            </div>
+
+                            <div class="stopped-label">
+                                REGISTRATION PAUSED
+                            </div>
+
+                            <h2>
+                                Registration Paused
+                            </h2>
+
+                            <p>
+                                You have indicated that you are not feeling well today.
+                                For your safety, donor registration cannot continue at
+                                this time.
+                            </p>
+
+                            <p class="stopped-note">
+                                If you selected <strong>No</strong> by mistake,
+                                you can go back and change your answer.
+                            </p>
+
+                            <!-- THESE ARE THE TWO PAUSED-SCREEN BUTTONS -->
+                            <div class="paused-screen-buttons">
+
+                                <button type="button" class="secondary-btn" onclick="continueRegistrationFromStopped()">
+                                    Back to Question 2
+                                </button>
+
+                                <button type="button" class="paused-dashboard-button"
+                                    onclick="goToDashboardFromRegistration()">
+
+                                    Go to Dashboard →
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- QUESTION 3 -->
+
+                    <div class="wizard-step" data-step="3">
+
+                        <span class="question-number">
+                            QUESTION 03
+                        </span>
+
+                        <h2>
+                            What are your height and weight?
+                        </h2>
+
+                        <p>
+                            Enter your current measurements.
+                        </p>
+
+
+                        <div class="wizard-field-grid">
+
+                            <div class="wizard-field">
+
+                                <label for="donorHeight">
+                                    Height *
+                                </label>
+
+                                <select id="donorHeight" required>
+
+                                    <option value="">
+                                        Select height
+                                    </option>
+
+                                    <option value="5'0">
+                                        5'0"
+                                    </option>
+
+                                    <option value="5'1">
+                                        5'1"
+                                    </option>
+
+                                    <option value="5'2">
+                                        5'2"
+                                    </option>
+
+                                    <option value="5'3">
+                                        5'3"
+                                    </option>
+
+                                    <option value="5'4">
+                                        5'4"
+                                    </option>
+
+                                    <option value="5'5">
+                                        5'5"
+                                    </option>
+
+                                    <option value="5'6">
+                                        5'6"
+                                    </option>
+
+                                    <option value="5'7">
+                                        5'7"
+                                    </option>
+
+                                    <option value="5'8">
+                                        5'8"
+                                    </option>
+
+                                    <option value="5'9">
+                                        5'9"
+                                    </option>
+
+                                    <option value="5'10">
+                                        5'10"
+                                    </option>
+
+                                    <option value="5'11">
+                                        5'11"
+                                    </option>
+
+                                    <option value="6'0">
+                                        6'0"
+                                    </option>
+
+                                    <option value="6'1">
+                                        6'1"
+                                    </option>
+
+                                    <option value="6'2">
+                                        6'2"
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="wizard-field">
+
+                                <label for="donorWeight">
+                                    Weight (kg) *
+                                </label>
+
+                                <input type="number" id="donorWeight" min="45" max="200" placeholder="e.g. 65" required>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUESTION 4 -->
+
+                    <div class="wizard-step" data-step="4">
+
+                        <span class="question-number">
+                            QUESTION 04
+                        </span>
+
+                        <h2>
+                            What is your age?
+                        </h2>
+
+                        <p>
+                            Donors must be at least 18 years old.
+                        </p>
+
+
+                        <div class="wizard-single-field">
+
+                            <label for="donorAge">
+                                Age *
+                            </label>
+
+                            <input type="number" id="donorAge" min="18" max="75" placeholder="Enter age" required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUESTION 5 -->
+
+                    <div class="wizard-step" data-step="5">
+
+                        <span class="question-number">
+                            QUESTION 05
+                        </span>
+
+                        <h2>
+                            What is your blood group?
+                        </h2>
+
+                        <p>
+                            Select your blood group.
+                        </p>
+
+
+                        <div class="blood-choice-grid">
+
+                            <label class="blood-choice">
+                                <input type="radio" name="bloodGroup" value="A+">
+                                <span>A+</span>
+                            </label>
+
+                            <label class="blood-choice">
+                                <input type="radio" name="bloodGroup" value="A-">
+                                <span>A-</span>
+                            </label>
+
+                            <label class="blood-choice">
+                                <input type="radio" name="bloodGroup" value="B+">
+                                <span>B+</span>
+                            </label>
+
+                            <label class="blood-choice">
+                                <input type="radio" name="bloodGroup" value="B-">
+                                <span>B-</span>
+                            </label>
+
+                            <label class="blood-choice">
+                                <input type="radio" name="bloodGroup" value="AB+">
+                                <span>AB+</span>
+                            </label>
+
+                            <label class="blood-choice">
+                                <input type="radio" name="bloodGroup" value="AB-">
+                                <span>AB-</span>
+                            </label>
+
+                            <label class="blood-choice">
+                                <input type="radio" name="bloodGroup" value="O+">
+                                <span>O+</span>
+                            </label>
+
+                            <label class="blood-choice">
+                                <input type="radio" name="bloodGroup" value="O-">
+                                <span>O-</span>
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUESTION 6 -->
+
+                    <div class="wizard-step" data-step="6">
+
+                        <span class="question-number">
+                            QUESTION 06
+                        </span>
+
+                        <h2>
+                            Have you donated blood before?
+                        </h2>
+
+                        <p>
+                            This helps us determine your
+                            donation history.
+                        </p>
+
+
+                        <div class="wizard-choice-grid">
+
+                            <label class="wizard-choice">
+
+                                <input type="radio" name="donatedBefore" value="yes">
+
+                                <span class="choice-icon">
+                                    ✓
+                                </span>
+
+                                <span>
+                                    Yes
+                                </span>
+
+                            </label>
+
+
+                            <label class="wizard-choice">
+
+                                <input type="radio" name="donatedBefore" value="no">
+
+                                <span class="choice-icon">
+                                    ✕
+                                </span>
+
+                                <span>
+                                    No
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUESTION 7 -->
+
+                    <div class="wizard-step" data-step="7">
+
+                        <span class="question-number">
+                            QUESTION 07
+                        </span>
+
+                        <h2>
+                            When was your last blood donation?
+                        </h2>
+
+                        <p>
+                            Required if you have donated before.
+                        </p>
+
+
+                        <div class="wizard-single-field">
+
+                            <label for="lastDonation">
+                                Last Donation Date
+                            </label>
+
+                            <input type="date" id="lastDonation">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUESTION 8 -->
+
+                    <div class="wizard-step" data-step="8">
+
+                        <span class="question-number">
+                            QUESTION 08
+                        </span>
+
+                        <h2>
+                            Do you currently have any medical condition?
+                        </h2>
+
+                        <p>
+                            Please answer honestly.
+                        </p>
+
+
+                        <div class="wizard-choice-grid">
+
+                            <label class="wizard-choice">
+
+                                <input type="radio" name="medicalCondition" value="yes">
+
+                                <span class="choice-icon">
+                                    ✓
+                                </span>
+
+                                <span>
+                                    Yes
+                                </span>
+
+                            </label>
+
+
+                            <label class="wizard-choice">
+
+                                <input type="radio" name="medicalCondition" value="no">
+
+                                <span class="choice-icon">
+                                    ✕
+                                </span>
+
+                                <span>
+                                    No
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUESTION 9 -->
+
+                    <div class="wizard-step" data-step="9">
+
+                        <span class="question-number">
+                            QUESTION 09
+                        </span>
+
+                        <h2>
+                            Are you currently taking medication?
+                        </h2>
+
+                        <p>
+                            Please answer honestly.
+                        </p>
+
+
+                        <div class="wizard-choice-grid">
+
+                            <label class="wizard-choice">
+
+                                <input type="radio" name="medication" value="yes">
+
+                                <span class="choice-icon">
+                                    ✓
+                                </span>
+
+                                <span>
+                                    Yes
+                                </span>
+
+                            </label>
+
+
+                            <label class="wizard-choice">
+
+                                <input type="radio" name="medication" value="no">
+
+                                <span class="choice-icon">
+                                    ✕
+                                </span>
+
+                                <span>
+                                    No
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+     MEDICATION DETAILS SCREEN
+     ================================================= -->
+
+                    <!-- MEDICATION DETAILS SCREEN -->
+
+                    <div id="medicationDetailsStep" class="wizard-step" data-step="12">
+
+                        <span class="question-number">
+                            MEDICATION INFORMATION
+                        </span>
+
+                        <h2>
+                            Tell Us About Your Medication
+                        </h2>
+
+                        <p>
+                            You indicated that you are currently taking medication.
+                            Please provide the following information about the medication
+                            you are taking.
+                        </p>
+
+
+                        <div class="wizard-field-grid">
+
+                            <div class="wizard-field">
+
+                                <label for="medicationName">
+                                    Medication Name *
+                                </label>
+
+                                <input type="text" id="medicationName" placeholder="e.g. Paracetamol">
+
+                            </div>
+
+
+                            <div class="wizard-field">
+
+                                <label for="medicationPurpose">
+                                    Reason for Taking It *
+                                </label>
+
+                                <input type="text" id="medicationPurpose" placeholder="e.g. Blood pressure">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="wizard-single-field" style="margin-top: 18px;">
+
+                            <label for="medicationDosage">
+                                Dosage / Frequency *
+                            </label>
+
+                            <input type="text" id="medicationDosage" placeholder="e.g. 1 tablet twice a day">
+
+                        </div>
+
+
+                        <div class="wizard-single-field" style="margin-top: 18px;">
+
+                            <label for="medicationDuration">
+                                How Long Have You Been Taking It? *
+                            </label>
+
+                            <input type="text" id="medicationDuration" placeholder="e.g. 2 weeks">
+
+                        </div>
+
+
+                        <div class="wizard-single-field" style="margin-top: 18px;">
+
+                            <label for="medicationNotes">
+                                Additional Information
+                            </label>
+
+                            <textarea id="medicationNotes" rows="4"
+                                placeholder="Enter any additional information about your medication..."></textarea>
+
+                        </div>
+
+
+                        <div style="
+            margin-top: 20px;
+            padding: 14px 16px;
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            border-radius: 12px;
+            color: #92400e;
+            font-size: 12px;
+            line-height: 1.6;
+        ">
+
+                            <strong>Important:</strong>
+                            Providing medication information does not
+                            automatically mean that you are ineligible to donate.
+                            The information is collected as part of the
+                            donor eligibility review.
+
+                        </div>
+
+
+                        <!-- ONLY MEDICATION PAGE NEXT BUTTON -->
+
+                        <div style="
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 24px;
+        ">
+
+                            <button type="button" class="primary-btn" onclick="continueFromMedicationDetails()">
+
+                                Next →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- QUESTION 10 -->
+
+                    <div class="wizard-step" data-step="10">
+
+                        <span class="question-number">
+                            QUESTION 10
+                        </span>
+
+                        <h2>
+                            Complete your donor profile
+                        </h2>
+
+                        <p>
+                            Enter your contact and location details.
+                        </p>
+
+
+                        <div class="wizard-field-grid">
+
+                            <div class="wizard-field">
+
+                                <label for="donorName">
+                                    Full Name *
+                                </label>
+
+                                <input type="text" id="donorName" placeholder="Full name" required>
+
+                            </div>
+
+
+                            <div class="wizard-field">
+
+                                <label for="donorPhone">
+                                    Phone *
+                                </label>
+
+                                <input type="tel" id="donorPhone" placeholder="+91 98765 43210" required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="wizard-single-field">
+
+                            <label for="donorZone">
+                                Location Zone *
+                            </label>
+
+                            <select id="donorZone" required>
+
+                                <option value="">
+                                    Select location zone
+                                </option>
+
+                                <option value="Zone A">
+                                    Zone A
+                                </option>
+
+                                <option value="Zone B">
+                                    Zone B
+                                </option>
+
+                                <option value="Zone C">
+                                    Zone C
+                                </option>
+
+                                <option value="Zone D">
+                                    Zone D
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- GOOGLE MAP -->
+
+                        <div class="zone-map-card">
+
+                            <div class="zone-map-heading">
+
+                                <div>
+
+                                    <span class="page-label">
+                                        LOCATION VERIFICATION
+                                    </span>
+
+                                    <h3>
+                                        Choose your zone using the map
+                                    </h3>
+
+                                    <p>
+                                        Google Maps is shown as the
+                                        location reference for the
+                                        phase-1 zone model.
+                                    </p>
+
+                                </div>
+
+                                <span class="zone-map-note">
+                                    Zone A–D
+                                </span>
+
+                            </div>
+
+
+                            <div class="zone-map-frame">
+
+                                <iframe title="Google Maps location reference"
+                                    src="https://www.google.com/maps?q=India&z=5&output=embed" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+
+                            </div>
+
+
+                            <div class="zone-legend">
+
+                                <span>
+                                    <strong>
+                                        Zone A
+                                    </strong>
+                                    North Sector
+                                </span>
+
+                                <span>
+                                    <strong>
+                                        Zone B
+                                    </strong>
+                                    Central Sector
+                                </span>
+
+                                <span>
+                                    <strong>
+                                        Zone C
+                                    </strong>
+                                    South Sector
+                                </span>
+
+                                <span>
+                                    <strong>
+                                        Zone D
+                                    </strong>
+                                    East Sector
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="wizard-consent">
+
+                            <input type="checkbox" id="donorConsent" required>
+
+                            <label for="donorConsent">
+
+                                I confirm that the details provided
+                                are accurate and I agree to be alerted
+                                for urgent blood requests.
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="message" class="wizard-message">
+                    </div>
+
+
+                    <!-- WIZARD CONTROLS -->
+
+                    <div class="wizard-controls">
+
+
+
+                        <div class="wizard-controls-right">
+
+                            <button type="button" id="prevStepBtn" class="secondary-btn is-hidden"
+                                onclick="wizardBack()">
+
+                                Previous
+
+                            </button>
+
+
+                            <button type="button" id="nextStepBtn" class="primary-btn" onclick="wizardNext()">
+
+                                Next →
+
+                            </button>
+
+
+                            <button type="submit" class="wizard-submit-btn is-hidden" id="wizardSubmitBtn">
+
+                                ✓ Complete Registration
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================================
+         DONOR PROFILE MODAL
+         ================================================= -->
+
+    <div id="donorProfileModal" class="modal">
+
+        <div class="modal-content donor-profile-modal">
+
+            <button class="close-modal" onclick="closeDonorProfile()">
+
+                ×
+
+            </button>
+
+
+            <div class="profile-modal-header">
+
+                <div id="profileAvatar" class="profile-avatar">
+
+                    👤
+
+                </div>
+
+                <div>
+
+                    <span class="page-label">
+                        DONOR VERIFIED PROFILE
+                    </span>
+
+                    <h2 id="profileName">
+                        Donor Name
+                    </h2>
+
+                    <p id="profileId">
+                        Donor ID
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-info-grid">
+
+                <div class="profile-info-item">
+
+                    <span>
+                        Blood Group
+                    </span>
+
+                    <strong id="profileBloodType">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-info-item">
+
+                    <span>
+                        Age
+                    </span>
+
+                    <strong id="profileAge">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-info-item">
+
+                    <span>
+                        Zone
+                    </span>
+
+                    <strong id="profileZone">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-info-item">
+
+                    <span>
+                        Weight
+                    </span>
+
+                    <strong id="profileWeight">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-info-item">
+
+                    <span>
+                        Height
+                    </span>
+
+                    <strong id="profileHeight">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-info-item">
+
+                    <span>
+                        Phone
+                    </span>
+
+                    <strong id="profilePhone">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-section">
+
+                <div class="profile-section-heading">
+
+                    <h3>
+                        ⏳ Eligibility Status
+                    </h3>
+
+                    <span id="profileEligibilityBadge" class="status-badge">
+                        -
+                    </span>
+
+                </div>
+
+                <div id="profileEligibilityCountdown" class="eligibility-countdown">
+
+                    -
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-section">
+
+                <div class="profile-section-heading">
+
+                    <div>
+
+                        <h3>
+                            🩸 Donation Timeline
+                        </h3>
+
+                        <p>
+                            Recorded donation history
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div id="profileDonationHistory" class="donation-history">
+
+                    <div class="empty-state">
+                        No donation logs found.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-actions">
+
+                <button class="secondary-btn" onclick="closeDonorProfile()">
+
+                    Close Window
+
+                </button>
+
+
+                <button class="danger-btn" onclick="deleteProfileDonor()">
+
+                    🗑️ Delete Profile
+
+                </button>
+
+
+                <button class="primary-btn" onclick="contactProfileDonor()">
+
+                    📞 Contact Donor
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         DONATION MODAL
+         ================================================= -->
+
+    <div id="donationModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-modal" onclick="closeDonationModal()">
+
+                ×
+
+            </button>
+
+
+            <div class="modal-icon">
+                🩸
+            </div>
+
+            <h2>
+                Log New Donation
+            </h2>
+
+            <p>
+                Add a completed donation to this donor's
+                history.
+            </p>
+
+
+            <form id="donationForm">
+
+                <div class="form-group">
+
+                    <label for="donationDate">
+                        Donation Date *
+                    </label>
+
+                    <input type="date" id="donationDate" required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="donationType">
+                        Donation Type *
+                    </label>
+
+                    <select id="donationType" required>
+
+                        <option value="">
+                            Select donation type
+                        </option>
+
+                        <option value="Whole Blood">
+                            Whole Blood
+                        </option>
+
+                        <option value="Plasma">
+                            Plasma
+                        </option>
+
+                        <option value="Platelets">
+                            Platelets
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button type="submit" class="submit-btn">
+
+                    Save Donation
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         REQUEST MODAL
+         ================================================= -->
+
+    <div id="requestModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-modal" onclick="closeRequestModal()">
+
+                ×
+
+            </button>
+
+
+            <div class="modal-icon">
+                🩸
+            </div>
+
+            <h2>
+                Broadcast Blood Request
+            </h2>
+
+            <p>
+                Create a new hospital or patient
+                emergency blood request.
+            </p>
+
+
+            <form id="modalRequestForm">
+
+                <div class="form-group">
+
+                    <label for="modalPatientName">
+                        Patient Name *
+                    </label>
+
+                    <input type="text" id="modalPatientName" placeholder="e.g. Meera Sharma" required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="modalBloodType">
+                        Required Blood Group *
+                    </label>
+
+                    <select id="modalBloodType" required>
+
+                        <option value="">
+                            Select Blood Group
+                        </option>
+
+                        <option value="A+">
+                            A+
+                        </option>
+
+                        <option value="A-">
+                            A-
+                        </option>
+
+                        <option value="B+">
+                            B+
+                        </option>
+
+                        <option value="B-">
+                            B-
+                        </option>
+
+                        <option value="AB+">
+                            AB+
+                        </option>
+
+                        <option value="AB-">
+                            AB-
+                        </option>
+
+                        <option value="O+">
+                            O+
+                        </option>
+
+                        <option value="O-">
+                            O-
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="modalZone">
+                        Hospital Zone *
+                    </label>
+
+                    <select id="modalZone" required>
+
+                        <option value="">
+                            Select Zone
+                        </option>
+
+                        <option value="Zone A">
+                            Zone A
+                        </option>
+
+                        <option value="Zone B">
+                            Zone B
+                        </option>
+
+                        <option value="Zone C">
+                            Zone C
+                        </option>
+
+                        <option value="Zone D">
+                            Zone D
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="modalUrgency">
+                        Priority Level *
+                    </label>
+
+                    <select id="modalUrgency" required>
+
+                        <option value="">
+                            Select Priority
+                        </option>
+
+                        <option value="Emergency">
+                            🚨 Emergency
+                        </option>
+
+                        <option value="Urgent">
+                            🔴 Urgent
+                        </option>
+
+                        <option value="Normal">
+                            🟢 Normal
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button type="submit" class="submit-btn">
+
+                    Broadcast Request
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         MATCH EXPLANATION MODAL
+         ================================================= -->
+
+    <div id="matchExplanationModal" class="modal">
+
+        <div class="modal-content match-explanation-modal">
+
+            <button class="close-modal" onclick="closeMatchExplanation()">
+
+                ×
+
+            </button>
+
+
+            <div class="modal-icon">
+                🏆
+            </div>
+
+            <h2>
+                Match Analysis Breakdown
+            </h2>
+
+            <p>
+                Transparency audit explaining how
+                the algorithm computed this match score.
+            </p>
+
+
+            <div id="matchExplanationContent" class="match-explanation-content">
+
+            </div>
+
+
+            <div class="match-score-large">
+
+                <span>
+                    Calculated Match Score
+                </span>
+
+                <strong id="explanationScore">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= CHATBOT ================= -->
+
+    <div class="chatbot-container">
+
+        <!-- Chatbot Button -->
+        <button id="chatbotButton" class="chatbot-button">
+            💬
+        </button>
+
+        <!-- Chatbot Window -->
+        <div id="chatbotWindow" class="chatbot-window">
+
+            <div class="chatbot-header">
+                <div>
+                    <strong>LifeLink Assistant</strong>
+                    <span>BloodConnect Help</span>
+                </div>
+
+                <button id="chatbotClose" class="chatbot-close">
+                    ×
+                </button>
+            </div>
+
+            <div id="chatbotMessages" class="chatbot-messages">
+
+                <div class="bot-message">
+                    👋 Hi! I'm the LifeLink Assistant.
+                    <br><br>
+                    I can help you with donor registration,
+                    blood requests, Smart Matcher and more.
+                </div>
+
+            </div>
+
+            <div class="chatbot-input-area">
+
+                <input type="text" id="chatbotInput" placeholder="Ask something...">
+
+                <button id="chatbotSend">
+                    ➤
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript Files -->
+    <!-- JavaScript Files - LOAD IN THIS ORDER -->
+    <script src="JS/config.js"></script>
+    <script src="JS/data.js"></script>
+    <script src="JS/auth.js"></script>
+    <script src="JS/navigation.js"></script>
+    <script src="JS/eligibility.js"></script>
+    <script src="JS/compatibility.js"></script>
+    <script src="JS/wizard.js"></script>
+    <script src="JS/donors.js"></script>
+    <script src="JS/requests.js"></script>
+    <script src="JS/matcher.js"></script>
+    <script src="JS/dashboard.js"></script>
+    <script src="JS/profile.js"></script>
+    <script src="JS/messages.js"></script>
+    <script src="JS/modals.js"></script>
+    <script src="JS/utils.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/chatbot.js"></script>
+
+</body>
+
+</html>
