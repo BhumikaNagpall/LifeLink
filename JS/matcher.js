@@ -10,7 +10,6 @@ function handleMatcherForm(event) {
 
     event.preventDefault();
 
-
     const patientName =
         document.getElementById(
             "patientName"
@@ -38,7 +37,6 @@ function handleMatcherForm(event) {
             )?.value
         );
 
-
     if (
         !patientName ||
         !bloodType ||
@@ -46,74 +44,44 @@ function handleMatcherForm(event) {
         !urgency ||
         !requestedUnits
     ) {
-
         alert(
             "Please complete all matcher fields."
         );
-
         return;
-
     }
 
-
     const request = {
-
-        id:
-            "REQ-" +
-            Date.now(),
-
-        patientName:
-            patientName,
-
-        requiredBloodType:
-            bloodType,
-
-        bloodType:
-            bloodType,
-
-        zone:
-            zone,
-
-        urgency:
-            urgency,
-
-        requestedUnits:
-            requestedUnits,
-
-        status:
-            "Searching",
-
-        createdAt:
-            new Date().toISOString()
-
+        id: "REQ-" + Date.now(),
+        patientName: patientName,
+        requiredBloodType: bloodType,
+        bloodType: bloodType,
+        zone: zone,
+        urgency: urgency,
+        requestedUnits: requestedUnits,
+        status: "Searching",
+        createdAt: new Date().toISOString()
     };
 
-
-    requests.push(
-        request
-    );
-
+    requests.push(request);
     saveRequests();
 
+    const matches = findMatchingDonors(request);
+    currentMatchData = matches;
 
-    const matches =
-        findMatchingDonors(
-            request
-        );
-
-
-    currentMatchData =
-        matches;
-
-
-    renderMatchResults(
-        request,
-        matches
-    );
-
-
+    renderMatchResults(request, matches);
     updateDashboard();
 
+    // ===== ADD THIS: AUTO SCROLL TO RESULTS =====
+    setTimeout(function () {
+        const resultsContainer = document.getElementById("matchResults");
+        if (resultsContainer) {
+            resultsContainer.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    }, 300);
+    // ===========================================
 }
 
 
@@ -395,9 +363,8 @@ function renderMatchResults(
         </div>
 
 
-        ${
-            eligibleMatches.length > 0
-                ? `
+        ${eligibleMatches.length > 0
+            ? `
                     <div class="fulfillment-banner">
 
                         <span>
@@ -410,26 +377,25 @@ function renderMatchResults(
                         <span>
                             Request:
                             ${escapeHTML(
-                                request.patientName
-                            )}
+                request.patientName
+            )}
                         </span>
 
                     </div>
                 `
-                : ""
+            : ""
         }
 
 
-        ${
-            matches
-                .map(
-                    (match, index) =>
-                        createMatchCard(
-                            match,
-                            index
-                        )
-                )
-                .join("")
+        ${matches
+            .map(
+                (match, index) =>
+                    createMatchCard(
+                        match,
+                        index
+                    )
+            )
+            .join("")
         }
 
     `;
@@ -462,15 +428,14 @@ function createMatchCard(
                 ${best ? "best-match" : ""}
             ">
 
-            ${
-                best
-                    ? `
+            ${best
+            ? `
                         <span class="best-label">
                             🏆 BEST MATCH
                         </span>
                     `
-                    : ""
-            }
+            : ""
+        }
 
 
             <div class="donor-top">
@@ -478,25 +443,24 @@ function createMatchCard(
                 <div>
 
                     <div class="donor-avatar">
-                        ${
-                            donor.name
-                                ? donor.name
-                                    .charAt(0)
-                                    .toUpperCase()
-                                : "?"
-                        }
+                        ${donor.name
+            ? donor.name
+                .charAt(0)
+                .toUpperCase()
+            : "?"
+        }
                     </div>
 
                     <h3>
                         ${escapeHTML(
-                            donor.name
-                        )}
+            donor.name
+        )}
                     </h3>
 
                     <span class="donor-id">
                         ${escapeHTML(
-                            donor.id
-                        )}
+            donor.id
+        )}
                     </span>
 
                 </div>
@@ -506,8 +470,8 @@ function createMatchCard(
 
                     <span class="blood-badge">
                         ${escapeHTML(
-                            donor.bloodType
-                        )}
+            donor.bloodType
+        )}
                     </span>
 
                     <span class="match-score">
@@ -529,8 +493,8 @@ function createMatchCard(
 
                     <strong>
                         ${escapeHTML(
-                            donor.zone
-                        )}
+            donor.zone
+        )}
                     </strong>
                 </p>
 
@@ -552,11 +516,10 @@ function createMatchCard(
                     </span>
 
                     <strong>
-                        ${
-                            match.eligible
-                                ? "Eligible"
-                                : "Not Eligible"
-                        }
+                        ${match.eligible
+            ? "Eligible"
+            : "Not Eligible"
+        }
                     </strong>
                 </p>
 
@@ -567,11 +530,10 @@ function createMatchCard(
                     </span>
 
                     <strong>
-                        ${
-                            match.cooldown > 0
-                                ? `${match.cooldown} days`
-                                : "Clear"
-                        }
+                        ${match.cooldown > 0
+            ? `${match.cooldown} days`
+            : "Clear"
+        }
                     </strong>
                 </p>
 
@@ -592,8 +554,8 @@ function createMatchCard(
                 <button
                     class="primary-btn match-contact-btn"
                     onclick="contactDonor('${escapeHTML(
-                        donor.id
-                    )}')">
+            donor.id
+        )}')">
 
                     Contact Donor
 
@@ -650,8 +612,8 @@ function showMatchExplanation(index) {
                         <span>
                             ${index + 1}.
                             ${escapeHTML(
-                                reason
-                            )}
+                    reason
+                )}
                         </span>
 
                         <strong>
@@ -702,12 +664,9 @@ function runMatchForRequest(requestId) {
                 String(requestId)
         );
 
-
     if (!request) return;
 
-
     showPage("find");
-
 
     const patientName =
         document.getElementById(
@@ -734,62 +693,55 @@ function runMatchForRequest(requestId) {
             "requestedUnits"
         );
 
-
     if (patientName) {
-
         patientName.value =
             request.patientName;
-
     }
 
-
     if (bloodType) {
-
         bloodType.value =
             request.requiredBloodType ||
             request.bloodType;
-
     }
-
 
     if (zone) {
-
         zone.value =
             request.zone;
-
     }
-
 
     if (urgency) {
-
         urgency.value =
             request.urgency;
-
     }
 
-
     if (requestedUnits) {
-
         requestedUnits.value =
             request.requestedUnits ||
             1;
-
     }
-
 
     const matches =
         findMatchingDonors(
             request
         );
 
-
     currentMatchData =
         matches;
-
 
     renderMatchResults(
         request,
         matches
     );
 
+    // ===== ADD THIS: AUTO SCROLL TO RESULTS =====
+    setTimeout(function() {
+        const resultsContainer = document.getElementById("matchResults");
+        if (resultsContainer) {
+            resultsContainer.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    }, 500);
+    // ===========================================
 }
