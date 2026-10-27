@@ -1,7 +1,0 @@
-.env
-node_modules/
-.venv/
-.venv-1/
-
-server/backups/
-witch mudita
