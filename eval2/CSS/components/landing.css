@@ -1,0 +1,393 @@
+/* =========================================================
+   LIFELINK - PUBLIC LANDING PAGE STYLES
+   Trustworthy, healthcare-oriented visual design & responsive layouts
+   ========================================================= */
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding-bottom: 40px;
+}
+
+/* --- Hero Section --- */
+.landing-hero {
+    position: relative;
+    padding: 60px 40px;
+    background: var(--bg-card);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    text-align: center;
+}
+
+.landing-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-red);
+}
+
+.landing-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: var(--red-light);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    color: var(--red-primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.landing-badge .pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--red-primary);
+    box-shadow: 0 0 10px var(--red-primary);
+}
+
+.landing-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 5vw, 54px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -1.2px;
+    color: var(--text-primary);
+    max-width: 900px;
+    margin: 0 auto 18px;
+}
+
+.landing-hero h1 span {
+    background: var(--gradient-red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.landing-hero p {
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 720px;
+    margin: 0 auto 32px;
+}
+
+.landing-cta-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.landing-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: var(--gradient-red);
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-red);
+    transition: var(--transition);
+}
+
+.landing-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px var(--red-glow-strong);
+}
+
+.landing-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    background: white;
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.landing-btn-secondary:hover {
+    border-color: var(--red-primary);
+    color: var(--red-primary);
+    transform: translateY(-2px);
+}
+
+/* --- Quick Stat Badges --- */
+.landing-stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.landing-stat-box {
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.landing-stat-box strong {
+    display: block;
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--red-primary);
+    font-family: var(--font-display);
+}
+
+.landing-stat-box span {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+/* --- Section Headers --- */
+.landing-section-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 32px;
+}
+
+.landing-section-header .section-tag {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--red-primary);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.landing-section-header h2 {
+    font-family: var(--font-display);
+    font-size: clamp(24px, 3.5vw, 36px);
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.landing-section-header p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* --- Problem / Solution Cards --- */
+.problem-solution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.problem-card {
+    padding: 32px 28px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative;
+}
+
+.problem-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-hover);
+}
+
+.problem-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    margin-bottom: 18px;
+    background: var(--red-light);
+    color: var(--red-primary);
+}
+
+.problem-card h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.problem-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* --- Workflow Steps (How it Works) --- */
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.workflow-card {
+    padding: 28px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    transition: var(--transition);
+}
+
+.workflow-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.workflow-step-num {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: 900;
+    color: rgba(204, 0, 0, 0.15);
+    font-family: var(--font-display);
+}
+
+.workflow-card-icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+.workflow-card h3 {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.workflow-card p {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* --- Clinical Safety Disclaimer Box --- */
+.clinical-disclaimer-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px;
+    background: rgba(255, 248, 235, 0.85);
+    border: 2px dashed #e6a700;
+    border-radius: var(--radius-lg);
+    color: #7a5200;
+}
+
+.clinical-disclaimer-card .disclaimer-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.clinical-disclaimer-card h4 {
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 4px;
+    color: #5c3d00;
+}
+
+.clinical-disclaimer-card p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 0;
+    color: #664400;
+}
+
+/* --- Bottom Action Banner --- */
+.landing-action-banner {
+    padding: 48px 36px;
+    background: var(--gradient-red);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-red);
+    color: white;
+    text-align: center;
+}
+
+.landing-action-banner h2 {
+    font-family: var(--font-display);
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.landing-action-banner p {
+    font-size: 15px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 24px;
+}
+
+.landing-action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.action-btn-white {
+    padding: 12px 24px;
+    background: white;
+    color: var(--red-primary);
+    font-weight: 800;
+    font-size: 13px;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.action-btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.action-btn-outline {
+    padding: 12px 24px;
+    background: transparent;
+    color: white;
+    font-weight: 800;
+    font-size: 13px;
+    border-radius: var(--radius-md);
+    border: 2px solid white;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.action-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
