@@ -1,0 +1,125 @@
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: 72px;
+    padding: 0 4%;
+    background: var(--bg-card);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow-sm);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.logo-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    color: white;
+    background: var(--gradient-red);
+    box-shadow: var(--shadow-red);
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: var(--shadow-red);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px var(--red-glow-strong);
+    }
+}
+
+.logo h2 {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+    background: var(--gradient-red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo span {
+    display: block;
+    margin-top: 3px;
+    color: var(--text-muted);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.nav-links::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 14px;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-btn .nav-icon {
+    font-size: 14px;
+}
+
+.nav-btn:hover {
+    color: var(--text-primary);
+    background: rgba(204, 0, 0, 0.04);
+    transform: translateY(-1px);
+}
+
+.nav-btn.active {
+    color: var(--red-primary);
+    background: rgba(204, 0, 0, 0.06);
+}
+
+.nav-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 3px;
+    background: var(--gradient-red);
+    border-radius: 999px;
+}

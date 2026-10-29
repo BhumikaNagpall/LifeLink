@@ -1,0 +1,128 @@
+/* it filters the buttons, manages blood request , we have find donor buttons from where compatible donors are found,
+ delete button for completed or cancelled requests and new request for adding a new blood request */
+
+.request-filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+}
+
+.request-filter {
+    padding: 9px 16px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid var(--border-color);
+    border-radius: 999px;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.request-filter:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+.request-filter.active {
+    background: var(--red-light);
+    border-color: var(--red-primary);
+    color: var(--red-primary);
+}
+
+.request-filter.emergency-filter.active {
+    background: var(--red-light);
+    border-color: var(--red-primary);
+}
+
+.request-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.request-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 22px;
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.request-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-md);
+}
+
+.request-main {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.request-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: var(--radius-md);
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid var(--border-color);
+}
+
+.request-icon.emergency {
+    background: var(--red-light);
+    border-color: rgba(204, 0, 0, 0.15);
+}
+
+.request-icon.urgent {
+    background: var(--amber-light);
+    border-color: rgba(204, 122, 0, 0.15);
+}
+
+.request-icon.normal {
+    background: var(--emerald-light);
+    border-color: rgba(45, 125, 70, 0.15);
+}
+
+.priority-badge {
+    margin-top: 4px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.priority-emergency {
+    color: var(--red-primary);
+    background: var(--red-light);
+    border: 2px solid rgba(204, 0, 0, 0.15);
+}
+
+.priority-urgent {
+    color: var(--amber-dark);
+    background: var(--amber-light);
+    border: 2px solid rgba(204, 122, 0, 0.15);
+}
+
+.priority-normal {
+    color: var(--emerald);
+    background: var(--emerald-light);
+    border: 2px solid rgba(45, 125, 70, 0.15);
+}
+
+.request-zone-label {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+}
