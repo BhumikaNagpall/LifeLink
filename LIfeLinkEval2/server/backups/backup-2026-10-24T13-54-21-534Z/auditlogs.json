@@ -1,0 +1,1994 @@
+[
+  {
+    "_id": "6adbaa4ad1a27ee0dddeeccf",
+    "action": "BLOOD_REQUEST_FULFILLED_VERIFIED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital@citycare.org",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-2026-FULFILLED-04",
+    "details": {
+      "unitsReceived": 2,
+      "clinicalNotes": "Crossmatch completed without agglutination. Transfusion completed safely."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:41:14.750Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adbaa4ad1a27ee0dddeeccd",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital@citycare.org",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-2026-EMERGENCY-01",
+    "details": {
+      "urgency": "Emergency",
+      "requiredBloodGroup": "O-",
+      "units": 2
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:41:14.750Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adbaa4ad1a27ee0dddeecce",
+    "action": "DONOR_INVITATION_ACCEPTED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec93",
+    "performerEmail": "aarav.donor@example.com",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-2026-001",
+    "details": {
+      "requestId": "REQ-2026-EMERGENCY-01",
+      "note": "Willing to arrive at City Care Hospital OT reception by 11:30 AM."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:41:14.750Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adbaa88ac82b75d5a47bc6f",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792780936502",
+    "details": {
+      "patientName": "Arjun Verma 1792780936437",
+      "requiredBloodGroup": "O-",
+      "units": 2,
+      "urgency": "Emergency",
+      "zone": "Zone B"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:42:16.507Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adbaa88ac82b75d5a47bc77",
+    "action": "BLOOD_REQUEST_FULFILLED_VERIFIED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792780936502",
+    "details": {
+      "unitsReceived": 3,
+      "clinicalNotes": "Crossmatch completed, 3 units transfused successfully without adverse reaction.",
+      "patientName": "Arjun Verma 1792780936437"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:42:16.531Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adbaa88ac82b75d5a47bc7b",
+    "action": "HOSPITAL_VERIFICATION_STATUS_CHANGED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "system@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "HospitalProfile",
+    "targetId": "6adbaa4ad1a27ee0dddeec8b",
+    "details": {
+      "institutionName": "City Care Hospital & Blood Bank [Demo Partner]",
+      "previousStatus": "authorized_institution",
+      "newStatus": "authorized_institution",
+      "notes": "Verified state healthcare department registration documentation."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:42:16.537Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adbaa89ac82b75d5a47bcac",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792780937036",
+    "details": {
+      "patientName": "Existing Match Target",
+      "requiredBloodGroup": "B+",
+      "units": 1,
+      "urgency": "Urgent",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:42:17.040Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adbaa89ac82b75d5a47bcb3",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792780937165",
+    "details": {
+      "patientName": "Deepak Rawat 1792780937135",
+      "requiredBloodGroup": "A+",
+      "units": 2,
+      "urgency": "Urgent",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:42:17.167Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adbaa89ac82b75d5a47bcc4",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792780937265",
+    "details": {
+      "requestId": "REQ-1792780937165",
+      "donorId": "DNR-1792780937173",
+      "donorName": "Ananya Deshmukh 1792780937135",
+      "matchScore": 95
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:42:17.272Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adbaa89ac82b75d5a47bcda",
+    "action": "DONOR_INVITATION_ACCEPTED",
+    "performedBy": "6adbaa89ac82b75d5a47bcb5",
+    "performerEmail": "donor@lifelink.internal",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792780937265",
+    "details": {
+      "requestId": "REQ-1792780937165",
+      "donorId": "DNR-1792780937173",
+      "previousStatus": "pending",
+      "newStatus": "accepted",
+      "note": "Available to visit the hospital tomorrow morning."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:42:17.313Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adbaa89ac82b75d5a47bce8",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792780937410",
+    "details": {
+      "requestId": "REQ-1792780937165",
+      "donorId": "DNR-1792780937315",
+      "donorName": "Rohan Kulkarni 1792780937135",
+      "matchScore": 0
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:42:17.414Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adbaa89ac82b75d5a47bcf0",
+    "action": "DONOR_INVITATION_DECLINED",
+    "performedBy": "6adbaa89ac82b75d5a47bcdc",
+    "performerEmail": "donor@lifelink.internal",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792780937410",
+    "details": {
+      "requestId": "REQ-1792780937165",
+      "donorId": "DNR-1792780937315",
+      "previousStatus": "pending",
+      "newStatus": "declined",
+      "note": "Currently out of city on business."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:42:17.424Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adbaa89ac82b75d5a47bd07",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792780937580",
+    "details": {
+      "patientName": "Overdue Test Patient 1792780937533",
+      "requiredBloodGroup": "AB+",
+      "units": 1,
+      "urgency": "Normal",
+      "zone": "Zone C"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:42:17.582Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adbaa89ac82b75d5a47bd16",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792780937675",
+    "details": {
+      "requestId": "REQ-1792780937580",
+      "donorId": "DNR-1792780937585",
+      "donorName": "Overdue Donor 1792780937533",
+      "matchScore": 0
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:42:17.680Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adbaa89ac82b75d5a47bd1d",
+    "action": "BLOOD_REQUEST_EXPIRED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "system_scheduler@lifelink.internal",
+    "userRole": "system",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792780937580",
+    "details": {
+      "requiredByDate": "2026-10-23T16:42:17.577Z",
+      "expiredAt": "2026-10-23T18:42:17.682Z"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:42:17.690Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adbaa89ac82b75d5a47bd2a",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792780937709",
+    "details": {
+      "patientName": "Escalation Patient 1792780937533",
+      "requiredBloodGroup": "O+",
+      "units": 1,
+      "urgency": "Emergency",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:42:17.712Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adbab98dd12ffe4ca437f0b",
+    "action": "DONOR_INVITATION_ACCEPTED",
+    "performedBy": "6adbaa4ad1a27ee0dddeecb6",
+    "performerEmail": "donor@lifelink.internal",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-2026-002",
+    "details": {
+      "requestId": "REQ-2026-EMERGENCY-01",
+      "donorId": "DNR-2026-006",
+      "previousStatus": "pending",
+      "newStatus": "accepted",
+      "note": "Responded via donor portal"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-23T18:46:48.346Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc4cbfb02fbf77f2c228a8",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792822463737",
+    "details": {
+      "patientName": "Arjun Verma 1792822463075",
+      "requiredBloodGroup": "O-",
+      "units": 2,
+      "urgency": "Emergency",
+      "zone": "Zone B"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:14:23.906Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc4cc0b02fbf77f2c228b0",
+    "action": "BLOOD_REQUEST_FULFILLED_VERIFIED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792822463737",
+    "details": {
+      "unitsReceived": 3,
+      "clinicalNotes": "Crossmatch completed, 3 units transfused successfully without adverse reaction.",
+      "patientName": "Arjun Verma 1792822463075"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:14:24.167Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc4cc0b02fbf77f2c228b4",
+    "action": "HOSPITAL_VERIFICATION_STATUS_CHANGED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "system@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "HospitalProfile",
+    "targetId": "6adbaa4ad1a27ee0dddeec8b",
+    "details": {
+      "institutionName": "City Care Hospital & Blood Bank [Demo Partner]",
+      "previousStatus": "authorized_institution",
+      "newStatus": "authorized_institution",
+      "notes": "Verified state healthcare department registration documentation."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:14:24.185Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc4cc2b02fbf77f2c228e5",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792822466199",
+    "details": {
+      "patientName": "Existing Match Target",
+      "requiredBloodGroup": "B+",
+      "units": 1,
+      "urgency": "Urgent",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:14:26.214Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc4cc2b02fbf77f2c228ec",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792822466517",
+    "details": {
+      "patientName": "Deepak Rawat 1792822466458",
+      "requiredBloodGroup": "A+",
+      "units": 2,
+      "urgency": "Urgent",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:14:26.524Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc4cc3b02fbf77f2c228fd",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792822466973",
+    "details": {
+      "requestId": "REQ-1792822466517",
+      "donorId": "DNR-1792822466538",
+      "donorName": "Ananya Deshmukh 1792822466458",
+      "matchScore": 95
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:14:27.165Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc4cc3b02fbf77f2c22913",
+    "action": "DONOR_INVITATION_ACCEPTED",
+    "performedBy": "6adc4cc2b02fbf77f2c228ee",
+    "performerEmail": "donor@lifelink.internal",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792822466973",
+    "details": {
+      "requestId": "REQ-1792822466517",
+      "donorId": "DNR-1792822466538",
+      "previousStatus": "pending",
+      "newStatus": "accepted",
+      "note": "Available to visit the hospital tomorrow morning."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:14:27.264Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc4cc3b02fbf77f2c22921",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792822467514",
+    "details": {
+      "requestId": "REQ-1792822466517",
+      "donorId": "DNR-1792822467271",
+      "donorName": "Rohan Kulkarni 1792822466458",
+      "matchScore": 0
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:14:27.528Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc4cc3b02fbf77f2c22929",
+    "action": "DONOR_INVITATION_DECLINED",
+    "performedBy": "6adc4cc3b02fbf77f2c22915",
+    "performerEmail": "donor@lifelink.internal",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792822467514",
+    "details": {
+      "requestId": "REQ-1792822466517",
+      "donorId": "DNR-1792822467271",
+      "previousStatus": "pending",
+      "newStatus": "declined",
+      "note": "Currently out of city on business."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:14:27.558Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc4cc3b02fbf77f2c22940",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792822467929",
+    "details": {
+      "patientName": "Overdue Test Patient 1792822467811",
+      "requiredBloodGroup": "AB+",
+      "units": 1,
+      "urgency": "Normal",
+      "zone": "Zone C"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:14:27.936Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc4cc4b02fbf77f2c2294f",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792822468289",
+    "details": {
+      "requestId": "REQ-1792822467929",
+      "donorId": "DNR-1792822467945",
+      "donorName": "Overdue Donor 1792822467811",
+      "matchScore": 0
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:14:28.320Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc4cc4b02fbf77f2c22956",
+    "action": "BLOOD_REQUEST_EXPIRED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "system_scheduler@lifelink.internal",
+    "userRole": "system",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792822467929",
+    "details": {
+      "requiredByDate": "2026-10-24T04:14:27.918Z",
+      "expiredAt": "2026-10-24T06:14:28.335Z"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:14:28.379Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc4cc4b02fbf77f2c2295c",
+    "action": "BLOOD_REQUEST_EXPIRED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "system_scheduler@lifelink.internal",
+    "userRole": "system",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792780937709",
+    "details": {
+      "requiredByDate": "2026-10-23T20:42:17.707Z",
+      "expiredAt": "2026-10-24T06:14:28.335Z"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:14:28.412Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc4cc4b02fbf77f2c22969",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792822468512",
+    "details": {
+      "patientName": "Escalation Patient 1792822467811",
+      "requiredBloodGroup": "O+",
+      "units": 1,
+      "urgency": "Emergency",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:14:28.521Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc51fab02fbf77f2c229bd",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792823802671",
+    "details": {
+      "patientName": "Arjun Verma 1792823802530",
+      "requiredBloodGroup": "O-",
+      "units": 2,
+      "urgency": "Emergency",
+      "zone": "Zone B"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:36:42.686Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc51fab02fbf77f2c229c5",
+    "action": "BLOOD_REQUEST_FULFILLED_VERIFIED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792823802671",
+    "details": {
+      "unitsReceived": 3,
+      "clinicalNotes": "Crossmatch completed, 3 units transfused successfully without adverse reaction.",
+      "patientName": "Arjun Verma 1792823802530"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:36:42.821Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc51fab02fbf77f2c229c9",
+    "action": "HOSPITAL_VERIFICATION_STATUS_CHANGED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "system@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "HospitalProfile",
+    "targetId": "6adbaa4ad1a27ee0dddeec8b",
+    "details": {
+      "institutionName": "City Care Hospital & Blood Bank [Demo Partner]",
+      "previousStatus": "authorized_institution",
+      "newStatus": "authorized_institution",
+      "notes": "Verified state healthcare department registration documentation."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:36:42.856Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc51fcb02fbf77f2c229fa",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792823804628",
+    "details": {
+      "patientName": "Existing Match Target",
+      "requiredBloodGroup": "B+",
+      "units": 1,
+      "urgency": "Urgent",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:36:44.635Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc51fcb02fbf77f2c22a01",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792823804977",
+    "details": {
+      "patientName": "Deepak Rawat 1792823804911",
+      "requiredBloodGroup": "A+",
+      "units": 2,
+      "urgency": "Urgent",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:36:44.984Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc51fdb02fbf77f2c22a12",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792823805362",
+    "details": {
+      "requestId": "REQ-1792823804977",
+      "donorId": "DNR-1792823804997",
+      "donorName": "Ananya Deshmukh 1792823804911",
+      "matchScore": 95
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:36:45.393Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc51fdb02fbf77f2c22a28",
+    "action": "DONOR_INVITATION_ACCEPTED",
+    "performedBy": "6adc51fcb02fbf77f2c22a03",
+    "performerEmail": "donor@lifelink.internal",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792823805362",
+    "details": {
+      "requestId": "REQ-1792823804977",
+      "donorId": "DNR-1792823804997",
+      "previousStatus": "pending",
+      "newStatus": "accepted",
+      "note": "Available to visit the hospital tomorrow morning."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:36:45.575Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc51fdb02fbf77f2c22a36",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792823805875",
+    "details": {
+      "requestId": "REQ-1792823804977",
+      "donorId": "DNR-1792823805586",
+      "donorName": "Rohan Kulkarni 1792823804911",
+      "matchScore": 0
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:36:45.887Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc51fdb02fbf77f2c22a3e",
+    "action": "DONOR_INVITATION_DECLINED",
+    "performedBy": "6adc51fdb02fbf77f2c22a2a",
+    "performerEmail": "donor@lifelink.internal",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792823805875",
+    "details": {
+      "requestId": "REQ-1792823804977",
+      "donorId": "DNR-1792823805586",
+      "previousStatus": "pending",
+      "newStatus": "declined",
+      "note": "Currently out of city on business."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:36:45.908Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc51feb02fbf77f2c22a55",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792823806293",
+    "details": {
+      "patientName": "Overdue Test Patient 1792823806185",
+      "requiredBloodGroup": "AB+",
+      "units": 1,
+      "urgency": "Normal",
+      "zone": "Zone C"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:36:46.300Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc51feb02fbf77f2c22a64",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792823806526",
+    "details": {
+      "requestId": "REQ-1792823806293",
+      "donorId": "DNR-1792823806307",
+      "donorName": "Overdue Donor 1792823806185",
+      "matchScore": 0
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:36:46.537Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc51feb02fbf77f2c22a6b",
+    "action": "BLOOD_REQUEST_EXPIRED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "system_scheduler@lifelink.internal",
+    "userRole": "system",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792823806293",
+    "details": {
+      "requiredByDate": "2026-10-24T04:36:46.286Z",
+      "expiredAt": "2026-10-24T06:36:46.542Z"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:36:46.559Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc51feb02fbf77f2c22a7a",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792823806637",
+    "details": {
+      "patientName": "Escalation Patient 1792823806185",
+      "requiredBloodGroup": "O+",
+      "units": 1,
+      "urgency": "Emergency",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:36:46.642Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc5491b02fbf77f2c22ac6",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792824465458",
+    "details": {
+      "patientName": "Arjun Verma 1792824465209",
+      "requiredBloodGroup": "O-",
+      "units": 2,
+      "urgency": "Emergency",
+      "zone": "Zone B"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:47:45.472Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc5491b02fbf77f2c22ace",
+    "action": "BLOOD_REQUEST_FULFILLED_VERIFIED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792824465458",
+    "details": {
+      "unitsReceived": 3,
+      "clinicalNotes": "Crossmatch completed, 3 units transfused successfully without adverse reaction.",
+      "patientName": "Arjun Verma 1792824465209"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:47:45.635Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc5491b02fbf77f2c22ad2",
+    "action": "HOSPITAL_VERIFICATION_STATUS_CHANGED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "system@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "HospitalProfile",
+    "targetId": "6adbaa4ad1a27ee0dddeec8b",
+    "details": {
+      "institutionName": "City Care Hospital & Blood Bank [Demo Partner]",
+      "previousStatus": "authorized_institution",
+      "newStatus": "authorized_institution",
+      "notes": "Verified state healthcare department registration documentation."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:47:45.680Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc5493b02fbf77f2c22b03",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792824467685",
+    "details": {
+      "patientName": "Existing Match Target",
+      "requiredBloodGroup": "B+",
+      "units": 1,
+      "urgency": "Urgent",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:47:47.691Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc5493b02fbf77f2c22b0a",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792824467964",
+    "details": {
+      "patientName": "Deepak Rawat 1792824467900",
+      "requiredBloodGroup": "A+",
+      "units": 2,
+      "urgency": "Urgent",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:47:47.970Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc5494b02fbf77f2c22b1b",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792824468245",
+    "details": {
+      "requestId": "REQ-1792824467964",
+      "donorId": "DNR-1792824467990",
+      "donorName": "Ananya Deshmukh 1792824467900",
+      "matchScore": 95
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:47:48.269Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc5494b02fbf77f2c22b31",
+    "action": "DONOR_INVITATION_ACCEPTED",
+    "performedBy": "6adc5493b02fbf77f2c22b0c",
+    "performerEmail": "donor@lifelink.internal",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792824468245",
+    "details": {
+      "requestId": "REQ-1792824467964",
+      "donorId": "DNR-1792824467990",
+      "previousStatus": "pending",
+      "newStatus": "accepted",
+      "note": "Available to visit the hospital tomorrow morning."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:47:48.413Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc5494b02fbf77f2c22b3f",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792824468661",
+    "details": {
+      "requestId": "REQ-1792824467964",
+      "donorId": "DNR-1792824468422",
+      "donorName": "Rohan Kulkarni 1792824467900",
+      "matchScore": 0
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:47:48.669Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc5494b02fbf77f2c22b47",
+    "action": "DONOR_INVITATION_DECLINED",
+    "performedBy": "6adc5494b02fbf77f2c22b33",
+    "performerEmail": "donor@lifelink.internal",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792824468661",
+    "details": {
+      "requestId": "REQ-1792824467964",
+      "donorId": "DNR-1792824468422",
+      "previousStatus": "pending",
+      "newStatus": "declined",
+      "note": "Currently out of city on business."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:47:48.693Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc5495b02fbf77f2c22b5e",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792824469214",
+    "details": {
+      "patientName": "Overdue Test Patient 1792824468993",
+      "requiredBloodGroup": "AB+",
+      "units": 1,
+      "urgency": "Normal",
+      "zone": "Zone C"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:47:49.225Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc5495b02fbf77f2c22b6d",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792824469675",
+    "details": {
+      "requestId": "REQ-1792824469214",
+      "donorId": "DNR-1792824469236",
+      "donorName": "Overdue Donor 1792824468993",
+      "matchScore": 0
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:47:49.703Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc5495b02fbf77f2c22b74",
+    "action": "BLOOD_REQUEST_EXPIRED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "system_scheduler@lifelink.internal",
+    "userRole": "system",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792824469214",
+    "details": {
+      "requiredByDate": "2026-10-24T04:47:49.194Z",
+      "expiredAt": "2026-10-24T06:47:49.712Z"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:47:49.744Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adc5495b02fbf77f2c22b85",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "hospital_ops@lifelink.internal",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792824469872",
+    "details": {
+      "patientName": "Escalation Patient 1792824468993",
+      "requiredBloodGroup": "O+",
+      "units": 1,
+      "urgency": "Emergency",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T06:47:49.883Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcaf49f7d1e8aa2d54e188",
+    "action": "HOSPITAL_VERIFICATION_STATUS_CHANGED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "HospitalProfile",
+    "targetId": "6adcaf49f7d1e8aa2d54e17e",
+    "details": {
+      "institutionName": "Memorial Trauma Center 1792847688634",
+      "previousStatus": "unverified_demo",
+      "newStatus": "authorized_institution",
+      "notes": "Verified state healthcare accreditation documents."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:14:49.359Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcaf49f7d1e8aa2d54e191",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adcaf48f7d1e8aa2d54e17c",
+    "performerEmail": "trauma_center_1792847688634@hosp.test",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792847689642",
+    "details": {
+      "patientName": "Arjun Verma 1792847688634",
+      "requiredBloodGroup": "O-",
+      "units": 2,
+      "urgency": "Emergency",
+      "zone": "Zone B"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:14:49.844Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcaf4af7d1e8aa2d54e1a7",
+    "action": "BLOOD_REQUEST_FULFILLED_VERIFIED",
+    "performedBy": "6adcaf48f7d1e8aa2d54e17c",
+    "performerEmail": "trauma_center_1792847688634@hosp.test",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792847689642",
+    "details": {
+      "unitsReceived": 3,
+      "clinicalNotes": "Crossmatch completed, 3 units transfused successfully without adverse reaction.",
+      "patientName": "Arjun Verma 1792847688634",
+      "donorId": "Unspecified"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:14:50.237Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcaf4af7d1e8aa2d54e1b2",
+    "action": "BLOOD_REQUEST_DELETED_BY_ADMIN",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792847689642",
+    "details": {
+      "patientName": "Arjun Verma 1792847688634"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:14:50.331Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcaff931dae0693924a650",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792847865662",
+    "details": {
+      "patientName": "Existing Match Target",
+      "requiredBloodGroup": "B+",
+      "units": 1,
+      "urgency": "Urgent",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:17:45.674Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb079aa6b31ad4e1341fb",
+    "action": "HOSPITAL_VERIFICATION_STATUS_CHANGED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "HospitalProfile",
+    "targetId": "6adcb078aa6b31ad4e1341f2",
+    "details": {
+      "institutionName": "Metro General Hospital 1792847992135",
+      "previousStatus": "unverified_demo",
+      "newStatus": "authorized_institution",
+      "notes": ""
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:19:53.085Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb079aa6b31ad4e134204",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adcb078aa6b31ad4e1341f0",
+    "performerEmail": "hosp_inv_1792847992135@metro.org",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792847993270",
+    "details": {
+      "patientName": "Deepak Rawat 1792847992135",
+      "requiredBloodGroup": "A+",
+      "units": 2,
+      "urgency": "Urgent",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:19:53.277Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb079aa6b31ad4e13421b",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adcb078aa6b31ad4e1341f0",
+    "performerEmail": "hosp_inv_1792847992135@metro.org",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792847993685",
+    "details": {
+      "requestId": "REQ-1792847993270",
+      "donorId": "DNR-1792847993285",
+      "donorName": "Ananya Deshmukh 1792847992135",
+      "matchScore": 0
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:19:53.835Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb07aaa6b31ad4e13424f",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adcb078aa6b31ad4e1341f0",
+    "performerEmail": "hosp_inv_1792847992135@metro.org",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792847994484",
+    "details": {
+      "requestId": "REQ-1792847993270",
+      "donorId": "DNR-1792847993960",
+      "donorName": "Rohan Kulkarni 1792847992135",
+      "matchScore": 0
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:19:54.492Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb07aaa6b31ad4e134259",
+    "action": "DONOR_INVITATION_DECLINED",
+    "performedBy": "6adcb079aa6b31ad4e134233",
+    "performerEmail": "rohan_1792847992135@donor.test",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792847994484",
+    "details": {
+      "requestId": "REQ-1792847993270",
+      "donorId": "DNR-1792847993960",
+      "previousStatus": "pending",
+      "newStatus": "declined",
+      "note": "Currently out of city on business."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:19:54.519Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb0ed669110bb15ae0257",
+    "action": "HOSPITAL_VERIFICATION_STATUS_CHANGED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "HospitalProfile",
+    "targetId": "6adcb0ed669110bb15ae024b",
+    "details": {
+      "institutionName": "Metro General Hospital 1792848108761",
+      "previousStatus": "unverified_demo",
+      "newStatus": "authorized_institution",
+      "notes": ""
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:21:49.462Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb0ed669110bb15ae0260",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adcb0ed669110bb15ae0249",
+    "performerEmail": "hosp_inv_1792848108761@metro.org",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792848109613",
+    "details": {
+      "patientName": "Deepak Rawat 1792848108761",
+      "requiredBloodGroup": "A+",
+      "units": 2,
+      "urgency": "Urgent",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:21:49.624Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb0ed669110bb15ae0279",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adcb0ed669110bb15ae0249",
+    "performerEmail": "hosp_inv_1792848108761@metro.org",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792848109935",
+    "details": {
+      "requestId": "REQ-1792848109613",
+      "donorId": "DNR-1792848109630",
+      "donorName": "Ananya Deshmukh 1792848108761",
+      "matchScore": 95
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:21:49.946Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb0ee669110bb15ae02a6",
+    "action": "DONOR_INVITATION_ACCEPTED",
+    "performedBy": "6adcb0ed669110bb15ae0263",
+    "performerEmail": "ananya_1792848108761@donor.test",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792848109935",
+    "details": {
+      "requestId": "REQ-1792848109613",
+      "donorId": "DNR-1792848109630",
+      "previousStatus": "pending",
+      "newStatus": "accepted",
+      "note": "Available to visit the hospital tomorrow morning."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:21:50.361Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb0ee669110bb15ae02b1",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adcb0ed669110bb15ae0249",
+    "performerEmail": "hosp_inv_1792848108761@metro.org",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792848110376",
+    "details": {
+      "requestId": "REQ-1792848109613",
+      "donorId": "DNR-1792848110008",
+      "donorName": "Rohan Kulkarni 1792848108761",
+      "matchScore": 0
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:21:50.384Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb0ee669110bb15ae02bb",
+    "action": "DONOR_INVITATION_DECLINED",
+    "performedBy": "6adcb0ee669110bb15ae028c",
+    "performerEmail": "rohan_1792848108761@donor.test",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792848110376",
+    "details": {
+      "requestId": "REQ-1792848109613",
+      "donorId": "DNR-1792848110008",
+      "previousStatus": "pending",
+      "newStatus": "declined",
+      "note": "Currently out of city on business."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:21:50.406Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1316bcbe1b2a84b1952",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792848177327",
+    "details": {
+      "patientName": "Overdue Test Patient 1792848176938",
+      "requiredBloodGroup": "AB+",
+      "units": 1,
+      "urgency": "Normal",
+      "zone": "Zone C"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:22:57.344Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1316bcbe1b2a84b1963",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792848177592",
+    "details": {
+      "requestId": "REQ-1792848177327",
+      "donorId": "DNR-1792848177354",
+      "donorName": "Overdue Donor 1792848176938",
+      "matchScore": 0
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:22:57.609Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1316bcbe1b2a84b196b",
+    "action": "BLOOD_REQUEST_EXPIRED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "system_scheduler@lifelink.internal",
+    "userRole": "system",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792848177327",
+    "details": {
+      "requiredByDate": "2026-10-24T11:22:57.313Z",
+      "expiredAt": "2026-10-24T13:22:57.621Z"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:22:57.644Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1316bcbe1b2a84b1971",
+    "action": "BLOOD_REQUEST_EXPIRED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "system_scheduler@lifelink.internal",
+    "userRole": "system",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792822468512",
+    "details": {
+      "requiredByDate": "2026-10-24T08:14:28.499Z",
+      "expiredAt": "2026-10-24T13:22:57.621Z"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:22:57.657Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1316bcbe1b2a84b1977",
+    "action": "BLOOD_REQUEST_EXPIRED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "system_scheduler@lifelink.internal",
+    "userRole": "system",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792823806637",
+    "details": {
+      "requiredByDate": "2026-10-24T08:36:46.627Z",
+      "expiredAt": "2026-10-24T13:22:57.621Z"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:22:57.670Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1316bcbe1b2a84b197d",
+    "action": "BLOOD_REQUEST_EXPIRED",
+    "performedBy": "6adbaa4ad1a27ee0dddeec84",
+    "performerEmail": "system_scheduler@lifelink.internal",
+    "userRole": "system",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792824469872",
+    "details": {
+      "requiredByDate": "2026-10-24T08:47:49.860Z",
+      "expiredAt": "2026-10-24T13:22:57.621Z"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:22:57.682Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1316bcbe1b2a84b198d",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792848177800",
+    "details": {
+      "patientName": "Escalation Patient 1792848176938",
+      "requiredBloodGroup": "O+",
+      "units": 1,
+      "urgency": "Emergency",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:22:57.812Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1466bcbe1b2a84b19f0",
+    "action": "HOSPITAL_VERIFICATION_STATUS_CHANGED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "HospitalProfile",
+    "targetId": "6adcb1466bcbe1b2a84b19e6",
+    "details": {
+      "institutionName": "Memorial Trauma Center 1792848198175",
+      "previousStatus": "unverified_demo",
+      "newStatus": "authorized_institution",
+      "notes": "Verified state healthcare accreditation documents."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:23:18.660Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1466bcbe1b2a84b19f9",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adcb1466bcbe1b2a84b19e4",
+    "performerEmail": "trauma_center_1792848198175@hosp.test",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792848198810",
+    "details": {
+      "patientName": "Arjun Verma 1792848198175",
+      "requiredBloodGroup": "O-",
+      "units": 2,
+      "urgency": "Emergency",
+      "zone": "Zone B"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:23:18.815Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1476bcbe1b2a84b1a0f",
+    "action": "BLOOD_REQUEST_FULFILLED_VERIFIED",
+    "performedBy": "6adcb1466bcbe1b2a84b19e4",
+    "performerEmail": "trauma_center_1792848198175@hosp.test",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792848198810",
+    "details": {
+      "unitsReceived": 3,
+      "clinicalNotes": "Crossmatch completed, 3 units transfused successfully without adverse reaction.",
+      "patientName": "Arjun Verma 1792848198175",
+      "donorId": "Unspecified"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:23:19.084Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1476bcbe1b2a84b1a1a",
+    "action": "BLOOD_REQUEST_DELETED_BY_ADMIN",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792848198810",
+    "details": {
+      "patientName": "Arjun Verma 1792848198175"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:23:19.125Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1486bcbe1b2a84b1a42",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792848200228",
+    "details": {
+      "patientName": "Existing Match Target",
+      "requiredBloodGroup": "B+",
+      "units": 1,
+      "urgency": "Urgent",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:23:20.232Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1486bcbe1b2a84b1a58",
+    "action": "HOSPITAL_VERIFICATION_STATUS_CHANGED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "HospitalProfile",
+    "targetId": "6adcb1486bcbe1b2a84b1a4c",
+    "details": {
+      "institutionName": "Metro General Hospital 1792848200394",
+      "previousStatus": "unverified_demo",
+      "newStatus": "authorized_institution",
+      "notes": ""
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:23:20.961Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1496bcbe1b2a84b1a61",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adcb1486bcbe1b2a84b1a4a",
+    "performerEmail": "hosp_inv_1792848200394@metro.org",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792848201101",
+    "details": {
+      "patientName": "Deepak Rawat 1792848200394",
+      "requiredBloodGroup": "A+",
+      "units": 2,
+      "urgency": "Urgent",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:23:21.105Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1496bcbe1b2a84b1a7a",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adcb1486bcbe1b2a84b1a4a",
+    "performerEmail": "hosp_inv_1792848200394@metro.org",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792848201418",
+    "details": {
+      "requestId": "REQ-1792848201101",
+      "donorId": "DNR-1792848201109",
+      "donorName": "Ananya Deshmukh 1792848200394",
+      "matchScore": 95
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:23:21.427Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1496bcbe1b2a84b1aa7",
+    "action": "DONOR_INVITATION_ACCEPTED",
+    "performedBy": "6adcb1496bcbe1b2a84b1a64",
+    "performerEmail": "ananya_1792848200394@donor.test",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792848201418",
+    "details": {
+      "requestId": "REQ-1792848201101",
+      "donorId": "DNR-1792848201109",
+      "previousStatus": "pending",
+      "newStatus": "accepted",
+      "note": "Available to visit the hospital tomorrow morning."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:23:21.822Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1496bcbe1b2a84b1ab2",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adcb1486bcbe1b2a84b1a4a",
+    "performerEmail": "hosp_inv_1792848200394@metro.org",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792848201837",
+    "details": {
+      "requestId": "REQ-1792848201101",
+      "donorId": "DNR-1792848201482",
+      "donorName": "Rohan Kulkarni 1792848200394",
+      "matchScore": 0
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:23:21.843Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb1496bcbe1b2a84b1abc",
+    "action": "DONOR_INVITATION_DECLINED",
+    "performedBy": "6adcb1496bcbe1b2a84b1a8d",
+    "performerEmail": "rohan_1792848200394@donor.test",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792848201837",
+    "details": {
+      "requestId": "REQ-1792848201101",
+      "donorId": "DNR-1792848201482",
+      "previousStatus": "pending",
+      "newStatus": "declined",
+      "note": "Currently out of city on business."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:23:21.863Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb14a6bcbe1b2a84b1adc",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792848202330",
+    "details": {
+      "patientName": "Overdue Test Patient 1792848202082",
+      "requiredBloodGroup": "AB+",
+      "units": 1,
+      "urgency": "Normal",
+      "zone": "Zone C"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:23:22.335Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb14a6bcbe1b2a84b1aed",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792848202518",
+    "details": {
+      "requestId": "REQ-1792848202330",
+      "donorId": "DNR-1792848202340",
+      "donorName": "Overdue Donor 1792848202082",
+      "matchScore": 0
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:23:22.525Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb14a6bcbe1b2a84b1af5",
+    "action": "BLOOD_REQUEST_EXPIRED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "system_scheduler@lifelink.internal",
+    "userRole": "system",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792848202330",
+    "details": {
+      "requiredByDate": "2026-10-24T11:23:22.321Z",
+      "expiredAt": "2026-10-24T13:23:22.531Z"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:23:22.542Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb14a6bcbe1b2a84b1b07",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792848202587",
+    "details": {
+      "patientName": "Escalation Patient 1792848202082",
+      "requiredBloodGroup": "O+",
+      "units": 1,
+      "urgency": "Emergency",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:23:22.591Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb5458ab1cede9111b1b0",
+    "action": "HOSPITAL_VERIFICATION_STATUS_CHANGED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "HospitalProfile",
+    "targetId": "6adcb5458ab1cede9111b1a6",
+    "details": {
+      "institutionName": "Memorial Trauma Center 1792849221017",
+      "previousStatus": "unverified_demo",
+      "newStatus": "authorized_institution",
+      "notes": "Verified state healthcare accreditation documents."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:40:21.571Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb5458ab1cede9111b1b9",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adcb5458ab1cede9111b1a4",
+    "performerEmail": "trauma_center_1792849221017@hosp.test",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792849221724",
+    "details": {
+      "patientName": "Arjun Verma 1792849221017",
+      "requiredBloodGroup": "O-",
+      "units": 2,
+      "urgency": "Emergency",
+      "zone": "Zone B"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:40:21.730Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb5468ab1cede9111b1cf",
+    "action": "BLOOD_REQUEST_FULFILLED_VERIFIED",
+    "performedBy": "6adcb5458ab1cede9111b1a4",
+    "performerEmail": "trauma_center_1792849221017@hosp.test",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792849221724",
+    "details": {
+      "unitsReceived": 3,
+      "clinicalNotes": "Crossmatch completed, 3 units transfused successfully without adverse reaction.",
+      "patientName": "Arjun Verma 1792849221017",
+      "donorId": "Unspecified"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:40:22.017Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb5468ab1cede9111b1da",
+    "action": "BLOOD_REQUEST_DELETED_BY_ADMIN",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792849221724",
+    "details": {
+      "patientName": "Arjun Verma 1792849221017"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:40:22.058Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb5478ab1cede9111b202",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792849223240",
+    "details": {
+      "patientName": "Existing Match Target",
+      "requiredBloodGroup": "B+",
+      "units": 1,
+      "urgency": "Urgent",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:40:23.245Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb5488ab1cede9111b218",
+    "action": "HOSPITAL_VERIFICATION_STATUS_CHANGED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "HospitalProfile",
+    "targetId": "6adcb5478ab1cede9111b20c",
+    "details": {
+      "institutionName": "Metro General Hospital 1792849223457",
+      "previousStatus": "unverified_demo",
+      "newStatus": "authorized_institution",
+      "notes": ""
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:40:24.145Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb5488ab1cede9111b221",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adcb5478ab1cede9111b20a",
+    "performerEmail": "hosp_inv_1792849223457@metro.org",
+    "userRole": "hospital",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792849224345",
+    "details": {
+      "patientName": "Deepak Rawat 1792849223457",
+      "requiredBloodGroup": "A+",
+      "units": 2,
+      "urgency": "Urgent",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:40:24.349Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb5488ab1cede9111b23a",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adcb5478ab1cede9111b20a",
+    "performerEmail": "hosp_inv_1792849223457@metro.org",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792849224746",
+    "details": {
+      "requestId": "REQ-1792849224345",
+      "donorId": "DNR-1792849224354",
+      "donorName": "Ananya Deshmukh 1792849223457",
+      "matchScore": 95
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:40:24.758Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb5498ab1cede9111b267",
+    "action": "DONOR_INVITATION_ACCEPTED",
+    "performedBy": "6adcb5488ab1cede9111b224",
+    "performerEmail": "ananya_1792849223457@donor.test",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792849224746",
+    "details": {
+      "requestId": "REQ-1792849224345",
+      "donorId": "DNR-1792849224354",
+      "previousStatus": "pending",
+      "newStatus": "accepted",
+      "note": "Available to visit the hospital tomorrow morning."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:40:25.118Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb5498ab1cede9111b272",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adcb5478ab1cede9111b20a",
+    "performerEmail": "hosp_inv_1792849223457@metro.org",
+    "userRole": "hospital",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792849225138",
+    "details": {
+      "requestId": "REQ-1792849224345",
+      "donorId": "DNR-1792849224808",
+      "donorName": "Rohan Kulkarni 1792849223457",
+      "matchScore": 0
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:40:25.143Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb5498ab1cede9111b27c",
+    "action": "DONOR_INVITATION_DECLINED",
+    "performedBy": "6adcb5488ab1cede9111b24d",
+    "performerEmail": "rohan_1792849223457@donor.test",
+    "userRole": "donor",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792849225138",
+    "details": {
+      "requestId": "REQ-1792849224345",
+      "donorId": "DNR-1792849224808",
+      "previousStatus": "pending",
+      "newStatus": "declined",
+      "note": "Currently out of city on business."
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:40:25.162Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb5498ab1cede9111b29c",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792849225650",
+    "details": {
+      "patientName": "Overdue Test Patient 1792849225368",
+      "requiredBloodGroup": "AB+",
+      "units": 1,
+      "urgency": "Normal",
+      "zone": "Zone C"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:40:25.654Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb5498ab1cede9111b2ad",
+    "action": "DONOR_INVITATION_SENT",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "Invitation",
+    "targetId": "INV-1792849225800",
+    "details": {
+      "requestId": "REQ-1792849225650",
+      "donorId": "DNR-1792849225657",
+      "donorName": "Overdue Donor 1792849225368",
+      "matchScore": 0
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:40:25.808Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb5498ab1cede9111b2b5",
+    "action": "BLOOD_REQUEST_EXPIRED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "system_scheduler@lifelink.internal",
+    "userRole": "system",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792849225650",
+    "details": {
+      "requiredByDate": "2026-10-24T11:40:25.643Z",
+      "expiredAt": "2026-10-24T13:40:25.814Z"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:40:25.823Z",
+    "__v": 0
+  },
+  {
+    "_id": "6adcb5498ab1cede9111b2c9",
+    "action": "BLOOD_REQUEST_CREATED",
+    "performedBy": "6adbaa49d1a27ee0dddeec7b",
+    "performerEmail": "admin@lifelink.internal",
+    "userRole": "admin",
+    "targetEntity": "BloodRequest",
+    "targetId": "REQ-1792849225876",
+    "details": {
+      "patientName": "Escalation Patient 1792849225368",
+      "requiredBloodGroup": "O+",
+      "units": 1,
+      "urgency": "Emergency",
+      "zone": "Zone A"
+    },
+    "ipAddress": "",
+    "timestamp": "2026-10-24T13:40:25.880Z",
+    "__v": 0
+  }
+]
